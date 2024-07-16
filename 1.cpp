@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 double multiply(double number, int n) {
     double ans = 1.0;
     for (int i = 1; i <= n; i++) {
@@ -9,13 +8,11 @@ double multiply(double number, int n) {
     return ans;
 }
 
-double getNthRoot(int n, int m) 
-{
+double getNthRoot(int n, int m) {
     double low = 1;
     double high = m;
     double eps = 1e-6;
-    while ((high - low) > eps) 
-    {
+    while ((high - low) > eps) {
         double mid = (low + high) / 2;
         if (multiply(mid, n) < m) {
             low = mid;
@@ -25,7 +22,6 @@ double getNthRoot(int n, int m)
     }
     return low; // or return (low + high) / 2;
 }
-
 
 int main() {
     int n = 3;
